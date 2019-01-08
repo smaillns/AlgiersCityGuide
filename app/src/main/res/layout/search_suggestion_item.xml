@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/global_spacing_l"
+    android:paddingRight="@dimen/activity_horizontal_vertical_margin_s"
+    android:paddingLeft="@dimen/activity_horizontal_vertical_margin_s"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/search_suggestion_item_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView" />
+</LinearLayout>

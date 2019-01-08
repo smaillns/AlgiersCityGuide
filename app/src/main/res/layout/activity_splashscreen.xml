@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/splash_screen_content2"
+    tools:context=".activity.SplashscreenActivity">
+
+
+    <com.example.smail.algiers_city_guide.splashscreen.kbv.KenBurnsView
+        android:id="@+id/ken_burns_images"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical|center_horizontal"
+        android:src="@drawable/app_logo23"
+        tools:ignore="SpUsage" />
+
+    <TextView
+        android:id="@+id/welcome_text"
+        style="@style/TextViewAppearanceSplash"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/logo"
+        android:layout_gravity="center"
+        android:layout_marginTop="60dp"
+        android:alpha="0.0"
+        android:text="@string/welcome"
+        android:textColor="@android:color/white" />
+
+    <TextView
+        android:id="@+id/loadingTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|center"
+        android:text="@string/pre_loading"
+        android:textColor="@android:color/white"
+        android:textStyle="bold"
+        android:visibility="invisible" />
+
+    <!--&lt;!&ndash; The primary full-screen view. This can be replaced with whatever view-->
+         <!--is needed to present your content, e.g. VideoView, SurfaceView,-->
+         <!--TextureView, etc. &ndash;&gt;-->
+    <!--<TextView-->
+        <!--android:id="@+id/fullscreen_content"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:gravity="center"-->
+        <!--android:keepScreenOn="true"-->
+        <!--android:text="@string/dummy_content"-->
+        <!--android:textColor="#33b5e5"-->
+        <!--android:textSize="50sp"-->
+        <!--android:textStyle="bold" />-->
+
+    <!--&lt;!&ndash; This FrameLayout insets its children based on system windows using-->
+         <!--android:fitsSystemWindows. &ndash;&gt;-->
+    <!--<FrameLayout-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:fitsSystemWindows="true">-->
+
+        <!--<LinearLayout-->
+            <!--android:id="@+id/fullscreen_content_controls"-->
+            <!--style="?metaButtonBarStyle"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_gravity="bottom|center_horizontal"-->
+            <!--android:background="@color/black_overlay"-->
+            <!--android:orientation="horizontal"-->
+            <!--tools:ignore="UselessParent">-->
+
+            <!--<Button-->
+                <!--android:id="@+id/dummy_button"-->
+                <!--style="?metaButtonBarButtonStyle"-->
+                <!--android:layout_width="0dp"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_weight="1"-->
+                <!--android:text="@string/dummy_button" />-->
+
+        <!--</LinearLayout>-->
+    <!--</FrameLayout>-->
+
+</FrameLayout>

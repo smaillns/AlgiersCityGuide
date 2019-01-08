@@ -1,0 +1,52 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.example.smail.algiers_city_guide.activity.SpotDetailsActivity">
+    <item
+        android:id="@+id/action_share"
+        android:orderInCategory="1"
+        android:title="Share"
+        android:icon="@drawable/ic_share_black_24dp"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/action_empty"
+        android:orderInCategory="2"
+        android:title="@string/action_map"
+        android:icon="@drawable/ic_more_vert_black_24dp"
+        app:showAsAction="always" >
+
+        <menu>
+            <group>
+            <item
+                android:id="@+id/action_rate"
+                android:orderInCategory="2"
+                android:title="@string/action_rate"
+                android:icon="@drawable/ic_rate_review_black_24dp"
+                app:showAsAction="withText|always" />
+
+            <item
+                android:id="@+id/action_about"
+                android:orderInCategory="3"
+                android:title="@string/action_about"
+                android:icon="@drawable/ic_info_outline_black_24dp"
+                app:showAsAction="never" />
+
+            </group>
+            <item android:title="@string/language">
+                <menu>
+                    <item
+                        android:id="@+id/choix_en2"
+                        android:icon="@drawable/en64"
+                        android:title="@string/en_language"
+                        app:showAsAction="withText|always" />
+                    <item
+                        android:id="@+id/choix_fr2"
+                        android:icon="@drawable/fr64"
+                        android:title="@string/fr_language" />
+                </menu>
+            </item>
+
+        </menu>
+    </item>
+</menu>

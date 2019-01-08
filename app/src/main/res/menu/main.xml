@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/action_map"
+        android:orderInCategory="1"
+        android:title="@string/action_map"
+        android:icon="@drawable/ic_map_black_24dp"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/action_empty"
+        android:orderInCategory="2"
+        android:title="@string/action_map"
+        android:icon="@drawable/ic_more_vert_black_24dp"
+        app:showAsAction="always" >
+
+        <menu>
+            <group
+                android:id="@+id/g1">
+                <item
+                    android:id="@+id/action_rate"
+                    android:icon="@drawable/ic_rate_review_black_24dp"
+                    android:orderInCategory="2"
+                    android:title="@string/action_rate"
+                    app:showAsAction="withText|always" />
+                <item
+                    android:id="@+id/action_about"
+                    android:icon="@drawable/ic_info_outline_black_24dp"
+                    android:orderInCategory="3"
+                    android:title="@string/action_about"
+                    app:showAsAction="never" />
+            </group>
+
+            <item android:title="@string/language">
+                <menu>
+                    <item
+                        android:id="@+id/choix_en"
+                        android:icon="@drawable/en64"
+                        android:title="@string/en_language"
+                        app:showAsAction="withText|always" />
+                    <item
+                        android:id="@+id/choix_fr"
+                        android:icon="@drawable/fr64"
+                        android:enabled="true"
+                        android:title="@string/fr_language" />
+                </menu>
+            </item>
+
+
+        </menu>
+    </item>
+
+
+</menu>

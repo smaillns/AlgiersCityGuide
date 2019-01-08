@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#2196f3</color>
+    <color name="colorPrimaryDark">#1976d2</color>
+    <color name="colorAccent">#CE467C</color>
+
+
+    <color name="global_text_primary_inverse">#ffffff</color>
+    <color name="global_text_secondary_inverse">#b3ffffff</color>
+
+    <color name="black_overlay">#66000000</color>
+
+    <color name="global_color_clickable_inverse">#aaffffff</color>
+
+</resources>

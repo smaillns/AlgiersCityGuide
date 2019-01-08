@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group
+        android:id="@+id/group1"
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/menu_all_spots"
+            android:icon="@drawable/ic_all_spots_24dp"
+            android:title= "@string/action_all_spots" />
+        <item
+            android:id="@+id/menu_favortites"
+            android:icon="@drawable/ic_favorite_24dp"
+            android:title="@string/action_favorites" />
+    </group>
+
+    <group
+        android:id="@+id/group2"
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/menu_hotels"
+            android:icon="@drawable/ic_hotel_24dp"
+            android:title="@string/action_hotels"
+            />
+        <item
+            android:id="@+id/menu_museum"
+            android:icon="@drawable/ic_museum_24dp"
+            android:title="@string/action_museum"
+            />
+        <item
+            android:id="@+id/menu_attraction"
+            android:icon="@drawable/ic_linked_camera_24dp"
+            android:title="@string/action_attraction"
+            />
+        <item
+            android:id="@+id/menu_beaches"
+            android:icon="@drawable/ic_beach_access_black_24dp"
+            android:title="@string/action_beaches"
+            />
+        <item
+            android:id="@+id/menu_shopping"
+            android:icon="@drawable/ic_shopping_cart_black_24dp"
+            android:title="@string/action_shopping"
+            />
+        <item
+            android:id="@+id/menu_restaurants"
+            android:icon="@drawable/ic_restaurant_black_24dp"
+            android:title="@string/action_food"
+            />
+        <item
+            android:id="@+id/menu_sport"
+            android:icon="@drawable/ic_fitness_center_black_24dp"
+            android:title="@string/action_sport"
+            />
+        <item
+            android:id="@+id/menu_transport"
+            android:icon="@drawable/ic_directions_bus_black_24dp"
+            android:title="@string/action_transport"
+            />
+        <item
+            android:id="@+id/menu_other"
+            android:icon="@drawable/ic_more_horiz_black_24dp"
+            android:title="@string/action_more"
+            />
+    </group>
+
+
+
+    <item android:title="@string/action_title_more">
+        <menu>
+            <item
+                android:id="@+id/menu_proximity"
+                android:icon="@drawable/ic_proximity"
+                android:enabled="true"
+                android:title="@string/action_proximite" />
+
+            <!--<item-->
+                <!--android:id="@+id/menu_notification"-->
+                <!--android:icon="@drawable/ic_notifications_active_black_24dp"-->
+                <!--android:enabled="false"-->
+                <!--android:title="@string/action_notifications" />-->
+            <item
+                android:id="@+id/menu_gallery"
+                android:icon="@drawable/ic_collections_black_24dp"
+                android:enabled="false"
+                android:title="@string/action_gallery"
+                />
+        </menu>
+    </item>
+
+</menu>
