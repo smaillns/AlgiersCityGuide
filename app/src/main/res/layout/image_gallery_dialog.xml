@@ -15,5 +15,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/alger" />
+        app:srcCompat="@drawable/alger"
+        android:adjustViewBounds="true"/>
 </android.support.constraint.ConstraintLayout>

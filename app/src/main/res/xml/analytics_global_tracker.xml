@@ -3,7 +3,7 @@
 	<string name="ga_logLevel">verbose</string> <!-- The local log level for Analytics -->
 	<integer name="ga_dispatchPeriod">30</integer> <!-- How often the dispatcher should fire -->
 	<bool name="ga_dryRun">false</bool> <!-- Treat events as test events and don't send to google -->
-	<string name="com.example.smail.algiers_city_guide.activity.MainActivity">Spot list</string> <!-- The screen name that will appear in reports -->
-	<string name="com.example.smail.algiers_city_guide.activity.SpotDetailsActivity">Spot detail</string> <!-- The screen name that will appear in reports -->
-	<string name="com.example.smail.algiers_city_guide.activity.MainActivity">Map</string> <!-- The screen name that will appear in reports -->
+	<string name="smaillns.smail.dzair.activity.MainActivity">Spot list</string> <!-- The screen name that will appear in reports -->
+	<string name="smaillns.smail.dzair.activity.SpotDetailsActivity">Spot detail</string> <!-- The screen name that will appear in reports -->
+	<string name="smaillns.smail.dzair.activity.MainActivity">Map</string> <!-- The screen name that will appear in reports -->
 </resources>

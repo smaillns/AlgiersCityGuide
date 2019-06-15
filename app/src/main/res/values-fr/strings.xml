@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Algiers-city-guide</string>
+    <string name="app_name">Dzaïr</string>
 
 
     <string name="app_store_uri">https://play.google.com/store/apps/details?id=%1$s</string>
@@ -93,6 +93,9 @@
         "Algiers-City-Guide une superbe application permettant d'explorer les lieux mangnifiques de la ville d'Alger, capitale d'Algérie'\n"
     </string>
 
+    <string name="gps">
+        "Votre GPS semble être désactivé, veuillez l'activer pour profiter pleinement de l'application "
+    </string>
     <string name="large_text">
         "Material is the metaphor.\n\n"
 

@@ -5,13 +5,14 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:id="@+id/content"
-    tools:context=".fragment.SpotDetailsFragment">
+    tools:context="smaillns.smail.dzaïr.smaillns.smail.dzair.fragment.SpotDetailsFragment">
 
     <!-- TODO: Update blank fragment layout -->
 
     <LinearLayout
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:focusableInTouchMode="true">
 
         <android.support.constraint.Guideline
             android:id="@+id/guideline"
@@ -45,7 +46,7 @@
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toTopOf="parent">
 
-                            <com.example.smail.algiers_city_guide.splashscreen.kbv.KenBurnsView
+                            <smaillns.smail.dzair.kbv.KenBurnsView
                                 android:id="@+id/header_image_view2"
                                 android:layout_width="wrap_content"
                                 android:layout_height="0dp"

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">Algiers-city-guide</string>
+    <string name="app_name">Dzaïr</string>
 
 
     <string name="app_store_uri">https://play.google.com/store/apps/details?id=%1$s</string>
@@ -60,6 +60,9 @@
     <string name="placeholder_empty">No result found</string>
     <string name="placeholder_offline">No internet connection</string>
 
+    <string name="gps">
+        "Your GPS seems to be disabled, please activate it to take full advantage of the application"
+    </string>
 
     <string name="menu_search_hint">Search spots</string>
     <string name="menu_search">Search</string>

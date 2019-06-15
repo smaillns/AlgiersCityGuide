@@ -61,7 +61,7 @@
 
         <fragment
             android:id="@+id/fragment2"
-            android:name="com.example.smail.algiers_city_guide.fragment.SpotDetailsFragment"
+            android:name="smaillns.smail.dzair.fragment.SpotDetailsFragment"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
 

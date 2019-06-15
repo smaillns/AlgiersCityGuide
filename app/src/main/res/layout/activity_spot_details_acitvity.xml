@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
-    tools:context=".activity.SpotDetailsActivity">
+    tools:context="smaillns.smail.dzaïr.smaillns.smail.dzair.activity.SpotDetailsActivity">
 
     <android.support.design.widget.AppBarLayout
         android:id="@+id/app_bar"
@@ -27,7 +27,7 @@
             <!--app:expandedTitleTextAppearance="@style/Toolbar.TitleText"-->
             <!--app:collapsedTitleTextAppearance="@style/Toolbar.TitleText"-->
 
-            <com.example.smail.algiers_city_guide.splashscreen.kbv.KenBurnsView
+            <smaillns.smail.dzair.kbv.KenBurnsView
                 android:id="@+id/header_image_view"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"

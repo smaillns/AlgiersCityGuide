@@ -5,11 +5,11 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".activity.MapActivity">
+    tools:context="smaillns.smail.dzaïr.smaillns.smail.dzair.activity.MapActivity">
 
     <!--<fragment-->
         <!--android:id="@+id/fragment"-->
-        <!--android:name="com.example.smail.algiers_city_guide.fragment.MapFragment"-->
+        <!--android:name="smaillns.smail.dzaïr.MapFragment"-->
         <!--android:layout_width="match_parent"-->
         <!--android:layout_height="wrap_content" />-->
 

@@ -10,7 +10,7 @@
 	substitute for the full length canonical Activity name in screen view hit. In order to
 	specify an alternate screen name use an <screenName> element, with the name attribute
 	specifying the canonical name, and the value the alias to use instead. -->
-	<string name="com.example.smail.algiers_city_guide.activity.MainActivity">Spot list</string> <!-- The screen name that will appear in reports -->
-	<string name="com.example.smail.algiers_city_guide.activity.SpotDetailsActivity">Spot detail</string> <!-- The screen name that will appear in reports -->
-	<string name="com.example.smail.algiers_city_guide.activity.MainActivity">Map</string> <!-- The screen name that will appear in reports -->
+	<string name="smaillns.smail.dzair.activity.MainActivity">Spot list</string> <!-- The screen name that will appear in reports -->
+	<string name="smaillns.smail.dzair.activity.SpotDetailsActivity">Spot detail</string> <!-- The screen name that will appear in reports -->
+	<string name="smaillns.smail.dzair.activity.MainActivity">Map</string> <!-- The screen name that will appear in reports -->
 </resources>

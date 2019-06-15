@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:id="@+id/nestedScrollView"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context=".activity.SpotDetailsActivity"
+    tools:context="smaillns.smail.dzaïr.smaillns.smail.dzair.activity.SpotDetailsActivity"
     tools:showIn="@layout/activity_spot_details_acitvity">
 
     <LinearLayout
@@ -16,7 +16,7 @@
 
         <fragment
             android:id="@+id/fragment2"
-            android:name="com.example.smail.algiers_city_guide.fragment.SpotDetailsFragment"
+            android:name="smaillns.smail.dzair.fragment.SpotDetailsFragment"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
 

@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical"
-    tools:context=".activity.SpotDetailsActivity"
+    tools:context="smaillns.smail.dzaïr.smaillns.smail.dzair.activity.SpotDetailsActivity"
     tools:showIn="@layout/activity_spot_details_acitvity"
     >
 
