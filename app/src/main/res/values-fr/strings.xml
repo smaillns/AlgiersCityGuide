@@ -93,9 +93,22 @@
         "Algiers-City-Guide une superbe application permettant d'explorer les lieux mangnifiques de la ville d'Alger, capitale d'Algérie'\n"
     </string>
 
+    <!--<string name="gps">-->
+        <!--"Votre GPS semble être désactivé, veuillez l'activer pour profiter pleinement de l'application "-->
+    <!--</string>-->
+
     <string name="gps">
-        "Votre GPS semble être désactivé, veuillez l'activer pour profiter pleinement de l'application "
+        "Votre GPS semble être désactivé, veuillez l'activer pour afficher la distance entre les différents lieux"
     </string>
+
+    <string name="permission_service_location">
+        "Activer Service de Location pour profiter pleinement de l'application"
+    </string>
+
+    <string name="service_location_not_granted">
+        "De nombreuses fonctionnalités sont désactivées en raison d'une autorisation refusée! merci de reinstaller l'application"
+    </string>
+
     <string name="large_text">
         "Material is the metaphor.\n\n"
 

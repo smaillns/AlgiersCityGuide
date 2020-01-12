@@ -24,7 +24,6 @@ class App : Application() {
     companion object {
         var mInstance : Context? = null
 
-
         fun getContext(): Context? {
             return mInstance
         }

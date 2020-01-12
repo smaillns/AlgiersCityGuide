@@ -13,6 +13,12 @@ import smaillns.smail.dzair.R
 import smaillns.smail.dzair.kbv.KenBurnsView
 import smaillns.smail.dzair.utility.LocaleHelper
 import kotlinx.android.synthetic.main.activity_splashscreen.*
+import java.util.*
+
+
+
+
+
 
 
 /**
@@ -35,7 +41,24 @@ class SplashscreenActivity : AppCompatActivity() {
 
         val mKenBurns = findViewById<View>(R.id.ken_burns_images) as KenBurnsView
 //        mKenBurns.setImageResource(R.drawable.splash_screen_background)
-        mKenBurns.setImageResource(R.drawable.side_nav_bar)
+
+        val rand = Random()
+        val rdm = rand.nextInt(100)
+        println(rdm)
+
+        when(rdm){
+            in 1..11 ->  mKenBurns.setImageResource(R.drawable.image1)
+            in 12..38 ->  mKenBurns.setImageResource(R.drawable.image2)
+            in 39..65 ->  mKenBurns.setImageResource(R.drawable.image3)
+            in 66..84 ->  mKenBurns.setImageResource(R.drawable.image4)
+            else   ->   mKenBurns.setImageResource(R.drawable.image5)
+
+        }
+
+
+
+
+
 
         val mLogo = findViewById<View>(R.id.logo) as ImageView
         mLogo.setAlpha(1.0f)

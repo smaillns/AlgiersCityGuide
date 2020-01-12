@@ -62,7 +62,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         val context = LocaleHelper.setLocale(this, preferences.language)
         super.onCreate(savedInstanceState)
 
-        statusCheck()   // to enbale GPS
+        //statusCheck()   // to enbale GPS
 
         setContentView(R.layout.activity_main)
         setSupportActionBar(toolbar)
@@ -458,8 +458,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
     fun statusCheck(){
         val manager = getSystemService(Context.LOCATION_SERVICE) as LocationManager
         if (!manager.isProviderEnabled(LocationManager.GPS_PROVIDER)) {
-            buildAlertMessageNoGps();
-
+            buildAlertMessageNoGps()
         }
 
     }

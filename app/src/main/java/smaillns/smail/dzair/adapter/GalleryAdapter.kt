@@ -70,7 +70,7 @@ class GalleryAdapter(private var myListImages: ArrayList<String>, var mCtx: Cont
 
 
         val imageAware = ImageViewAware(holder.image, false)
-        mImageLoader.displayImage(RetrofitService.baseUrl+"/"+myListImages[position], imageAware,mDisplayImageOptions, mImageLoadingListener)
+        mImageLoader.displayImage(RetrofitService.baseUrl+"/images/"+myListImages[position], imageAware,mDisplayImageOptions, mImageLoadingListener)
 
 
         holder.itemView.setOnClickListener(
@@ -86,7 +86,7 @@ class GalleryAdapter(private var myListImages: ArrayList<String>, var mCtx: Cont
                     alert.setView(alertLayout)
                     val image_gall = alertLayout.findViewById<ImageView>(R.id.imageView_gallery)
                     val imageAware2 = ImageViewAware(image_gall, false)
-                    mImageLoader.displayImage(RetrofitService.baseUrl+"/"+myListImages[position], imageAware2,mDisplayImageOptions, mImageLoadingListener)
+                    mImageLoader.displayImage(RetrofitService.baseUrl+"/images/"+myListImages[position], imageAware2,mDisplayImageOptions, mImageLoadingListener)
 
 
                     // disallow cancel of AlertDialog on click of back button and outside touch

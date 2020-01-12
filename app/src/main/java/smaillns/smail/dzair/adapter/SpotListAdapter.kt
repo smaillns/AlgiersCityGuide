@@ -1,13 +1,18 @@
 package smaillns.smail.dzair.adapter
 
+import android.animation.Animator
+import android.app.Activity
+import android.app.ActivityOptions
 import android.content.Context
 import android.content.Intent
 import android.graphics.Typeface
+import android.os.Build
 import android.os.Bundle
 import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.view.animation.AccelerateDecelerateInterpolator
 import android.view.animation.DecelerateInterpolator
 import android.widget.*
 import smaillns.smail.dzair.R
@@ -101,7 +106,7 @@ class SpotListAdapter(private var myDataset: ArrayList<Spot>, var mFooterList: L
 //        mImageLoader.displayImage("assets://"+myDataset[position].image, holder.imageView)
 //        mImageLoader.displayImage(RetrofitService.baseUrl+"/"+myDataset[position].image, holder.imageView)
         val imageAware = ImageViewAware(holder.imageView, false)
-        mImageLoader.displayImage(RetrofitService.baseUrl+"/"+myDataset[position].image, imageAware,mDisplayImageOptions, mImageLoadingListener)
+        mImageLoader.displayImage(RetrofitService.baseUrl+"/images/"+myDataset[position].image, imageAware,mDisplayImageOptions, mImageLoadingListener)
 
 
 //            mImageLoader.displayImage("assets://eiffeltower.png", holder.imageView, mDisplayImageOptions, mImageLoadingListener)
@@ -117,8 +122,37 @@ class SpotListAdapter(private var myDataset: ArrayList<Spot>, var mFooterList: L
 
         holder.itemView.setOnClickListener(
                 { view ->
+
+//                 ---------------_make s small animation
+                    view.animate()
+                            .scaleX(0.95f)
+                            .scaleY(0.95f)
+                            .setDuration(500)
+                            .setInterpolator(AccelerateDecelerateInterpolator())
+                            .setListener(object : Animator.AnimatorListener {
+                                override fun onAnimationStart(animator: Animator) {
+                                    view.visibility = View.VISIBLE
+                                    view.isEnabled = false
+                                }
+
+                                override fun onAnimationEnd(animator: Animator) {
+                                    view.isEnabled = true
+                                    view.animate()
+                                            .scaleX(1f)
+                                            .scaleY(1f)
+
+                                }
+
+                                override fun onAnimationCancel(animator: Animator) {}
+
+                                override fun onAnimationRepeat(animator: Animator) {}
+                            })
+//                    ---------------------------_EndAnimation
+
 //                    Toast.makeText(mCtx, " Click Action ", Toast.LENGTH_SHORT).show()
                     val intent = Intent(mCtx, SpotDetailsActivity::class.java)
+
+
 
                     val extras = Bundle()
                     extras.putSerializable("spot", RoomService.appDataBase.getSpotDao().getSpot(myDataset[position].id))
@@ -126,9 +160,19 @@ class SpotListAdapter(private var myDataset: ArrayList<Spot>, var mFooterList: L
                     intent.putExtras(extras)
 
 
-                    //val options = ActivityOptions.makeSceneTransitionAnimation(activity!!)
+                    if (Build.VERSION.SDK_INT > 20)
+                        try {
+                            val options = ActivityOptions.makeSceneTransitionAnimation(mCtx as Activity)
+                            mCtx.startActivity(intent, options.toBundle())
 
-                    mCtx.startActivity(intent)
+                        }catch (e :Exception){
+
+                        }
+
+                    else
+                        mCtx.startActivity(intent)
+
+
                 })
 
 

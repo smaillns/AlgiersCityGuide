@@ -76,7 +76,8 @@ public class MapInfoWindowAdapter implements GoogleMap.InfoWindowAdapter {
                 ImageViewAware imageAware = new ImageViewAware(iv, false);
 //                mImageLoader.displayImage(RetrofitService.baseUrl+"/"+myDataset[position].image, imageAware,mDisplayImageOptions, mImageLoadingListener)
 
-                mImageLoader.displayImage("https://algiers-city-guide.appspot.com"+"/"+spt.getImage(), imageAware, mDisplayImageOptions, mImageLoadingListener);
+                mImageLoader.displayImage("http://192.168.1.45:8088"+"/images/"+spt.getImage(), imageAware, mDisplayImageOptions, mImageLoadingListener);
+
 
                 //mImageLoader.displayImage("assets://"+spt.getImage(), iv);
                 break;

@@ -60,8 +60,19 @@
     <string name="placeholder_empty">No result found</string>
     <string name="placeholder_offline">No internet connection</string>
 
+    <!--<string name="gps">-->
+        <!--"Your GPS seems to be disabled, please activate it to take full advantage of the application"-->
+    <!--</string>-->
     <string name="gps">
-        "Your GPS seems to be disabled, please activate it to take full advantage of the application"
+        "Your GPS seems to be disabled, please activate it to show distance between the different spots"
+    </string>
+
+    <string name="permission_service_location">
+        "Activate Location Service to take full advantage ot the application"
+    </string>
+
+    <string name="service_location_not_granted">
+        "Many feature are disapled due to denied permission! please reinstall the application"
     </string>
 
     <string name="menu_search_hint">Search spots</string>

@@ -14,7 +14,7 @@
         android:layout_weight="1"
         android:adjustViewBounds="false"
         android:scaleType="fitXY"
-        app:srcCompat="@drawable/alger" />
+        app:srcCompat="@drawable/image1" />
 
     <TextView
         android:id="@+id/nomMarker"

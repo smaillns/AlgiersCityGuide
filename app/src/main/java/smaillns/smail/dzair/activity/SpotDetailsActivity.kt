@@ -3,6 +3,8 @@ package smaillns.smail.dzair.activity
 import android.Manifest
 import android.annotation.SuppressLint
 import android.annotation.TargetApi
+import android.app.Activity
+import android.app.ActivityOptions
 import android.content.Context
 import android.content.Intent
 import android.content.pm.PackageManager
@@ -23,6 +25,7 @@ import android.support.annotation.RequiresApi
 import android.support.v4.app.ActivityCompat
 import android.support.v4.content.ContextCompat
 import android.support.v7.app.AlertDialog
+import android.transition.Slide
 import android.view.Menu
 import android.view.MenuItem
 import smaillns.smail.dzair.App
@@ -69,6 +72,8 @@ class SpotDetailsActivity : AppCompatActivity() {
             // extras
             intent.putExtra("spot", spot)
 
+
+
             return intent
         }
 
@@ -87,7 +92,18 @@ class SpotDetailsActivity : AppCompatActivity() {
         setSupportActionBar(toolbar)
 
 
+
         handleArguments()
+
+        if (Build.VERSION.SDK_INT > 20)
+            try {
+                val s = Slide()
+                s.setDuration(1000)
+                window.enterTransition = s
+            }catch (e : Exception){
+
+            }
+
 
         initialize()
 
@@ -481,7 +497,7 @@ if (backBtn2 != null)               backBtn2.setOnClickListener({
 //            mImageLoader.displayImage("assets://"+spot.image, mKenBurns)
 
             val imageAware = ImageViewAware(mKenBurns, false)
-            mImageLoader.displayImage(RetrofitService.baseUrl+"/"+spot.image, imageAware,mDisplayImageOptions)
+            mImageLoader.displayImage(RetrofitService.baseUrl+"/images/"+spot.image, imageAware,mDisplayImageOptions)
 //            mImageLoader.displayImage(RetrofitService.baseUrl+"/"+spot.image, mKenBurns)
         }
         else
@@ -489,7 +505,7 @@ if (backBtn2 != null)               backBtn2.setOnClickListener({
             val mKenBurns2 = findViewById<View>(R.id.header_image_view2) as KenBurnsView
 //            mImageLoader.displayImage("assets://"+spot.image, mKenBurns2)
             val imageAware = ImageViewAware(mKenBurns2, false)
-            mImageLoader.displayImage(RetrofitService.baseUrl+"/"+spot.image, imageAware,mDisplayImageOptions)
+            mImageLoader.displayImage(RetrofitService.baseUrl+"/images/"+spot.image, imageAware,mDisplayImageOptions)
 //            mImageLoader.displayImage(RetrofitService.baseUrl+"/"+spot.image, mKenBurns2)
 
         }

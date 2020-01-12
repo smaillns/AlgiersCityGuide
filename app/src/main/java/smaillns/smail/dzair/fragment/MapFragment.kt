@@ -264,7 +264,11 @@ class MapFragment() : TaskFragment(), OnMapReadyCallback {
             val preferences = Preferences(activity)
 
             mMap!!.setMapType(preferences.getMapType())
-            mMap!!.isMyLocationEnabled = true
+           try{
+               mMap!!.isMyLocationEnabled = true
+           }catch(e: Exception){
+               Toast.makeText(getActivity()!!, getString(R.string.service_location_not_granted), Toast.LENGTH_LONG).show()
+           }
 
             val settings = mMap!!.getUiSettings()
             settings.setAllGesturesEnabled(true)
@@ -274,8 +278,14 @@ class MapFragment() : TaskFragment(), OnMapReadyCallback {
             var latLng: LatLng? = null
             if (mSpotLatitude == 0.0 && mSpotLongitude == 0.0) {
                 val locationManager = activity!!.getSystemService(Context.LOCATION_SERVICE) as LocationManager
-                val location = getLastKnownLocation(locationManager)
-                if (location != null) latLng = LatLng(location!!.getLatitude(), location!!.getLongitude())
+                val location : Location?
+                try{
+                    location = getLastKnownLocation(locationManager)
+                    if (location != null) latLng = LatLng(location!!.getLatitude(), location!!.getLongitude())
+                }catch(e: Exception){
+                    Toast.makeText(getActivity()!!, getString(R.string.service_location_not_granted), Toast.LENGTH_LONG).show()
+                    latLng = LatLng(36.753766, 3.058784)  //the coordinates of Algiers|default
+                }
             } else {
                 latLng = LatLng(mSpotLatitude, mSpotLongitude)
             }

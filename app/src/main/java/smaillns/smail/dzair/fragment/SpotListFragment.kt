@@ -18,6 +18,7 @@ import android.os.Handler
 import android.provider.SearchRecentSuggestions
 import android.provider.Settings
 import android.support.design.widget.FloatingActionButton
+import android.support.design.widget.Snackbar
 import android.support.v4.app.ActivityCompat
 import android.support.v4.content.ContextCompat
 import android.support.v4.view.MenuItemCompat
@@ -29,6 +30,7 @@ import android.util.DisplayMetrics
 import android.view.*
 import android.view.animation.AccelerateDecelerateInterpolator
 import android.widget.AutoCompleteTextView
+import android.widget.Toast
 import smaillns.smail.dzair.CityGuideConfig
 import smaillns.smail.dzair.Query
 
@@ -51,6 +53,7 @@ import smaillns.smail.dzair.view.ViewState
 import com.google.android.gms.ads.AdRequest
 import com.google.android.gms.ads.AdView
 import com.google.android.gms.maps.model.LatLng
+import kotlinx.android.synthetic.main.fragment_spot_details.*
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -71,7 +74,6 @@ class SpotListFragment() :  TaskFragment(), GeolocationListener {
     private var mLocation: Location? = null
     private var mTimerHandler: Handler? = null
     private var mTimerRunnable: Runnable? = null
-
 
     private var mCategoryId: Int = 0
     private var mSearchQuery: String? = null
@@ -200,7 +202,7 @@ class SpotListFragment() :  TaskFragment(), GeolocationListener {
         // init timer task
         setupTimer()
 
-        //statusCheck()   // to enbale GPS
+        statusCheck()   // to enbale GPS
     }
 
 
@@ -268,10 +270,10 @@ class SpotListFragment() :  TaskFragment(), GeolocationListener {
                 Logcat.d("Fragment.timerRunnable()")
 
                 // start geolocation
-                mGeolocation = null
+//                mGeolocation = null
                 checkForPermission()
-                checkForOtherPermissions()
-                //mGeolocation = Geolocation(activity!!.getSystemService(Context.LOCATION_SERVICE) as LocationManager, this@SpotListFragment)
+//                checkForOtherPermissions()
+//                mGeolocation = Geolocation(activity!!.getSystemService(Context.LOCATION_SERVICE) as LocationManager, this@SpotListFragment)
 
                 mTimerHandler!!.postDelayed(this, TIMER_DELAY)
 
@@ -679,6 +681,10 @@ class SpotListFragment() :  TaskFragment(), GeolocationListener {
                     Logcat.d(""+response.toString())
 //                    Toast.makeText(getActivity()!!, response.toString(), Toast.LENGTH_SHORT).show()
                 }
+                //added 11/01/2020
+                if(mDataset.size == 0)
+                    showEmpty()
+
             }
 
         })
@@ -893,16 +899,19 @@ class SpotListFragment() :  TaskFragment(), GeolocationListener {
                 // Show an explanation to the user *asynchronously* -- don't block
                 // this thread waiting for the user's response! After the user
                 // sees the explanation, try again to request the permission.
-                ActivityCompat.requestPermissions(activity!!,
-                        arrayOf(Manifest.permission.ACCESS_FINE_LOCATION, Manifest.permission.ACCESS_COARSE_LOCATION),
-                        5)
+
+                Toast.makeText(getActivity()!!, getString(R.string.service_location_not_granted), Toast.LENGTH_LONG).show()
+
+                mGeolocation = null
 
 
             } else {
                 // No explanation needed, we can request the permission.
-                ActivityCompat.requestPermissions(activity!!,
-                        arrayOf(Manifest.permission.ACCESS_FINE_LOCATION, Manifest.permission.ACCESS_COARSE_LOCATION),
-                        1)
+//                requestPermissions(activity!!,
+//                        arrayOf(Manifest.permission.ACCESS_FINE_LOCATION, Manifest.permission.ACCESS_COARSE_LOCATION),
+//                        10)
+                requestPermissions(arrayOf(Manifest.permission.ACCESS_FINE_LOCATION, Manifest.permission.ACCESS_COARSE_LOCATION),
+                        10)
 
                 Logcat.d("test","request fot permission")
                 // MY_PERMISSIONS_REQUEST_READ_CONTACTS is an
@@ -916,20 +925,21 @@ class SpotListFragment() :  TaskFragment(), GeolocationListener {
             Logcat.d("test", "Permission is granted")
         }
 
-
     }
     override fun onRequestPermissionsResult(requestCode: Int,
                                             permissions: Array<String>, grantResults: IntArray) {
         when (requestCode) {
-            1 -> {
+            10 -> {
                 // If request is cancelled, the result arrays are empty.
                 if ((grantResults.isNotEmpty() && grantResults[0] == PackageManager.PERMISSION_GRANTED)) {
                     // permission was granted, yay! Do the
                     // contacts-related task you need to do.
+
                     mGeolocation = Geolocation(activity!!.getSystemService(Context.LOCATION_SERVICE) as LocationManager, this@SpotListFragment)
                 } else {
                     // permission denied, boo! Disable the
                     // functionality that depends on this permission.
+
                 }
                 return
             }
@@ -956,6 +966,7 @@ class SpotListFragment() :  TaskFragment(), GeolocationListener {
                 // Show an explanation to the user *asynchronously* -- don't block
                 // this thread waiting for the user's response! After the user
                 // sees the explanation, try again to request the permission.
+
             } else {
                 // No explanation needed, we can request the permission.
                 ActivityCompat.requestPermissions(activity!!,
@@ -1037,6 +1048,7 @@ class SpotListFragment() :  TaskFragment(), GeolocationListener {
 
     fun statusCheck(){
         val manager = activity!!.getSystemService(Context.LOCATION_SERVICE) as LocationManager
+
         if (!manager.isProviderEnabled(LocationManager.GPS_PROVIDER)) {
             buildAlertMessageNoGps();
 
@@ -1053,6 +1065,10 @@ class SpotListFragment() :  TaskFragment(), GeolocationListener {
         val alert = builder.create()
         alert.show()
     }
+
+
+
+
 
 
 

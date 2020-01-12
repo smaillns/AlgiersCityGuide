@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:id="@+id/splash_screen_content2"
-    tools:context="smaillns.smail.dzaïr.smaillns.smail.dzair.activity.SplashscreenActivity">
+    tools:context="smaillns.smail.dzair.activity.SplashscreenActivity">
 
 
     <smaillns.smail.dzair.kbv.KenBurnsView
