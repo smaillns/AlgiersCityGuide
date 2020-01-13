@@ -127,7 +127,7 @@ class SpotListAdapter(private var myDataset: ArrayList<Spot>, var mFooterList: L
                     view.animate()
                             .scaleX(0.95f)
                             .scaleY(0.95f)
-                            .setDuration(500)
+                            .setDuration(300)
                             .setInterpolator(AccelerateDecelerateInterpolator())
                             .setListener(object : Animator.AnimatorListener {
                                 override fun onAnimationStart(animator: Animator) {

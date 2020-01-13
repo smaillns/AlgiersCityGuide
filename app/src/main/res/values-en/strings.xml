@@ -8,6 +8,7 @@
     <string name="maps_api_key">AIzaSyBq1WR3vxTlj4kMtJPAeE0PrZe0AiclN3E</string>
 
     <string name="google_maps_key">AIzaSyAcv1QRGREISd7MP1rGnXDUf6S7VtTsl4s</string>
+    <string name="youtube_api_key">AIzaSyByz_OmKb9Jj7kwhWtNl0Whw2f7P8uecaQ</string>
 
     <string name="action_call" translatable="false">Make call</string>
     <string name="action_navigate" translatable="false">Go to spot</string>
@@ -46,13 +47,15 @@
     <string name="action_food">Restaurants</string>
     <string name="action_notifications">Notifications</string>
     <string name="action_proximite">Proximity of Algiers</string>
-    <string name="action_gallery">Gallery</string>
+    <string name="action_gallery">Video Gallery</string>
     <string name="action_ATM">ATM</string>
     <string name="action_public_services">Public services</string>
     <string name="action_gardens">Public Gardens</string>
 
     <string name="action_title_more">More</string>
     <string name="action_more">Other</string>
+
+    <string name="video_gallery">Algiers in videos</string>
 
     <string name="language">Language : En</string>
 

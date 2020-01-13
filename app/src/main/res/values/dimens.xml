@@ -44,6 +44,11 @@
     <dimen name="app_bar_height_spot_details">250dp</dimen>
     <dimen name="text_margin">16dp</dimen>
 
+    <dimen name="fragment_video_list_recycler_item_size">300dp</dimen>
+    <dimen name="fragment_video_list_recycler_item_padding">10dp</dimen>
+
+
+
     <dimen name="fragment_map_marker_size">42dp</dimen>
 
 

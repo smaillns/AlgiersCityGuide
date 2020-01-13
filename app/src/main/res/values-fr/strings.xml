@@ -6,6 +6,8 @@
     <string name="maps_api_key">AIzaSyBq1WR3vxTlj4kMtJPAeE0PrZe0AiclN3E</string>
 
     <string name="google_maps_key">AIzaSyAcv1QRGREISd7MP1rGnXDUf6S7VtTsl4s</string>
+    <string name="youtube_api_key">AIzaSyByz_OmKb9Jj7kwhWtNl0Whw2f7P8uecaQ</string>
+
 
     <string name="action_call" translatable="false">Voulez vous effectuer l\'appel</string>
     <string name="action_navigate" translatable="false">Naviguer vers le spot</string>
@@ -44,13 +46,15 @@
     <string name="action_food">Restaurants</string>
     <string name="action_notifications">Notifications</string>
     <string name="action_proximite">A proximité d\'Alger</string>
-    <string name="action_gallery">Gallerie Photos</string>
+    <string name="action_gallery">Galerie Vidéos</string>
     <string name="action_ATM">ATM</string>
     <string name="action_public_services">Services Publics</string>
     <string name="action_gardens">Jardins Publics</string>
 
     <string name="action_title_more">Plus</string>
     <string name="action_more">Autres</string>
+
+    <string name="video_gallery">Alger en vidéos</string>
 
     <string name="language">Langue : Fr</string>
 

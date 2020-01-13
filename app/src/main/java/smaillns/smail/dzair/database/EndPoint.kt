@@ -1,13 +1,10 @@
 package smaillns.smail.dzair.database
 
 
-import smaillns.smail.dzair.entity.Category
-import smaillns.smail.dzair.entity.Image_
-import smaillns.smail.dzair.entity.Spot
-import smaillns.smail.dzair.entity.TestDB
 import retrofit2.Call
 import retrofit2.http.GET
 import retrofit2.http.Path
+import smaillns.smail.dzair.entity.*
 import java.util.*
 
 interface EndPoint {
@@ -30,4 +27,9 @@ interface EndPoint {
     @GET("nbrimages/{id}")
     fun getNbrImages(@Path("id") id:Int):Call<List<TestDB>>
 
+    @GET("videos")
+    fun getVideos():Call<ArrayList<Video>>
+
+    @GET("nbvideos")
+    fun getNbrVideos():Call<List<TestDB>>
 }

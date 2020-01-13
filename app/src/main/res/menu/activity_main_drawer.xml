@@ -83,8 +83,8 @@
                 <!--android:title="@string/action_notifications" />-->
             <item
                 android:id="@+id/menu_gallery"
-                android:icon="@drawable/ic_collections_black_24dp"
-                android:enabled="false"
+                android:icon="@drawable/ic_video_library_black_24dp"
+                android:enabled="true"
                 android:title="@string/action_gallery"
                 />
         </menu>

@@ -101,7 +101,6 @@ class SpotListFragment() :  TaskFragment(), GeolocationListener {
             private val LAZY_LOADING_OFFSET = 4
 
 
-
             fun newInstance(categoryId: Int): SpotListFragment {
                 val fragment = SpotListFragment()
 

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/video_placeholder2"
+    android:name="com.google.android.youtube.player.YouTubePlayerSupportFragment"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="smaillns.smail.dzair.fragment.GalleryVideoFragment">
+
+    <LinearLayout
+    android:id="@+id/container_content"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+        <android.support.v7.widget.RecyclerView
+        android:id="@+id/list_video_recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+
+    <com.google.android.gms.ads.AdView
+        android:id="@+id/fragment_spot_videos_adview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        app:adUnitId="@string/admob_unit_id_videos"
+        app:adSize="BANNER" />
+
+
+    </LinearLayout>
+
+    <include
+    layout="@layout/placeholder_empty"
+    android:id="@+id/container_empty"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:visibility="gone" />
+
+    <include
+    layout="@layout/placeholder_offline"
+    android:id="@+id/container_offline"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:visibility="gone" />
+
+    <include
+    layout="@layout/placeholder_progress"
+    android:id="@+id/container_progress"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:visibility="gone" />
+
+</FrameLayout>

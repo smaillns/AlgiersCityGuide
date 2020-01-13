@@ -16,7 +16,6 @@ import smaillns.smail.dzair.listener.OnSearchListener
 import smaillns.smail.dzair.utility.Logcat
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.app_bar_main.*
-import smaillns.smail.dzair.R.string.menu_search
 import android.location.LocationManager
 import android.net.Uri
 import android.support.v7.app.AlertDialog
@@ -27,6 +26,11 @@ import smaillns.smail.dzair.utility.LocaleHelper
 import smaillns.smail.dzair.utility.Preferences
 import com.google.android.gms.ads.MobileAds
 import com.google.android.gms.analytics.GoogleAnalytics
+import com.google.android.youtube.player.YouTubeBaseActivity
+import org.jetbrains.anko.toast
+import smaillns.smail.dzair.fragment.GalleryVideoFragment
+import smaillns.smail.dzair.fragment.VideoPopUpFragment
+
 
 
 class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener, OnSearchListener {
@@ -44,6 +48,8 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
     val CATEGORY_ID_TRANSPORT = 9
     val CATEGORY_ID_OTHER = 10
     val CATEGORY_ID_PROXIMITY = 11
+
+    val VIDEO_GALLERY = 100
 
 
     /*language choices*/
@@ -175,20 +181,45 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
 
 
     override fun onBackPressed() {
+
         if (drawer_layout.isDrawerOpen(GravityCompat.START)) {
             drawer_layout.closeDrawer(GravityCompat.START)
         } else {
-            if (cate != CATEGORY_ID_ALL)
-                {
-                cate = CATEGORY_ID_ALL
-                val fragmentManager = supportFragmentManager
-                val fragmentTransaction = fragmentManager.beginTransaction()
+            if (cate != CATEGORY_ID_ALL) {
+                if (cate == VIDEO_GALLERY) {
+                    val fragment = supportFragmentManager.findFragmentByTag("GALLERY_VIDEO_FRAGMENT") as GalleryVideoFragment
+                    if (!fragment.playingVideo){
+                        cate = CATEGORY_ID_ALL
+                        val fragmentManager = supportFragmentManager
+                        val fragmentTransaction = fragmentManager.beginTransaction()
 
-                val  listFragment = SpotListFragment.newInstance(CATEGORY_ID_ALL)
-                fragmentTransaction.replace(R.id._placeholder, listFragment).commitAllowingStateLoss()
-                setTitle(null)
-                tv_header_title.visibility = View.VISIBLE
+                        val  listFragment = SpotListFragment.newInstance(CATEGORY_ID_ALL)
+                        fragmentTransaction.replace(R.id._placeholder, listFragment).commitAllowingStateLoss()
+                        setTitle(null)
+                        tv_header_title.visibility = View.VISIBLE
+                    } else{
+                        val f_to = fragment.childFragmentManager.findFragmentById(R.id.video_placeholder2)
+                        fragment.childFragmentManager.beginTransaction().apply {
+                            remove(f_to)
+                            commit()
+                        }
+                        fragment.playingVideo = false
+                    }
+
+                }else{
+                    //TODO duplicated code
+                    cate = CATEGORY_ID_ALL
+                    val fragmentManager = supportFragmentManager
+                    val fragmentTransaction = fragmentManager.beginTransaction()
+
+                    val  listFragment = SpotListFragment.newInstance(CATEGORY_ID_ALL)
+                    fragmentTransaction.replace(R.id._placeholder, listFragment).commitAllowingStateLoss()
+                    setTitle(null)
+                    tv_header_title.visibility = View.VISIBLE
+
                 }
+
+            }
             else
                 super.onBackPressed()
         }
@@ -418,7 +449,12 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
                 setTitle(R.string.action_proximite)
             }
             R.id.menu_gallery -> {
+                cate = VIDEO_GALLERY
+                val  listVideoFragment = GalleryVideoFragment.newInstance()
+                fragmentTransaction.replace(R.id._placeholder, listVideoFragment, "GALLERY_VIDEO_FRAGMENT").commitAllowingStateLoss()
 
+                tv_header_title.visibility = View.GONE
+                setTitle(R.string.video_gallery)
             }
         }
 

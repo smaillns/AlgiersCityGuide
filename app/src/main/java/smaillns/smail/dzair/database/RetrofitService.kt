@@ -5,7 +5,7 @@ import retrofit2.converter.gson.GsonConverterFactory
 
 object RetrofitService {
 
-    val baseUrl = "http://192.168.1.45:8088"
+    val baseUrl = "http://192.168.1.34:8088"
 //    val baseUrl = "https://algiers-city-guide.appspot.com"
 
     val endPoint: EndPoint by lazy {

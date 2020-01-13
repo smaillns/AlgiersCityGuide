@@ -7,7 +7,7 @@ object RoomService {
     lateinit var context : Context
 
     val appDataBase by lazy {
-        Room.databaseBuilder(context, AppDataBase::class.java, "db5").allowMainThreadQueries().build()
+        Room.databaseBuilder(context, AppDataBase::class.java, "db6").allowMainThreadQueries().build()
     }
 
 }
