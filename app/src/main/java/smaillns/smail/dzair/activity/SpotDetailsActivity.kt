@@ -497,7 +497,7 @@ if (backBtn2 != null)               backBtn2.setOnClickListener({
 //            mImageLoader.displayImage("assets://"+spot.image, mKenBurns)
 
             val imageAware = ImageViewAware(mKenBurns, false)
-            mImageLoader.displayImage(RetrofitService.baseUrl+"/images/"+spot.image, imageAware,mDisplayImageOptions)
+            mImageLoader.displayImage(RetrofitService.imageBaseUrl+"/Images/"+spot.image, imageAware,mDisplayImageOptions)
 //            mImageLoader.displayImage(RetrofitService.baseUrl+"/"+spot.image, mKenBurns)
         }
         else
@@ -505,7 +505,7 @@ if (backBtn2 != null)               backBtn2.setOnClickListener({
             val mKenBurns2 = findViewById<View>(R.id.header_image_view2) as KenBurnsView
 //            mImageLoader.displayImage("assets://"+spot.image, mKenBurns2)
             val imageAware = ImageViewAware(mKenBurns2, false)
-            mImageLoader.displayImage(RetrofitService.baseUrl+"/images/"+spot.image, imageAware,mDisplayImageOptions)
+            mImageLoader.displayImage(RetrofitService.imageBaseUrl+"/Images/"+spot.image, imageAware,mDisplayImageOptions)
 //            mImageLoader.displayImage(RetrofitService.baseUrl+"/"+spot.image, mKenBurns2)
 
         }

@@ -106,7 +106,7 @@ class SpotListAdapter(private var myDataset: ArrayList<Spot>, var mFooterList: L
 //        mImageLoader.displayImage("assets://"+myDataset[position].image, holder.imageView)
 //        mImageLoader.displayImage(RetrofitService.baseUrl+"/"+myDataset[position].image, holder.imageView)
         val imageAware = ImageViewAware(holder.imageView, false)
-        mImageLoader.displayImage(RetrofitService.baseUrl+"/images/"+myDataset[position].image, imageAware,mDisplayImageOptions, mImageLoadingListener)
+        mImageLoader.displayImage(RetrofitService.imageBaseUrl+"/Images/"+myDataset[position].image, imageAware,mDisplayImageOptions, mImageLoadingListener)
 
 
 //            mImageLoader.displayImage("assets://eiffeltower.png", holder.imageView, mDisplayImageOptions, mImageLoadingListener)

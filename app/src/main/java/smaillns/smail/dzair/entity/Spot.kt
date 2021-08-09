@@ -46,12 +46,14 @@ data class Spot (
             var fb:String? = "",
         @ColumnInfo(name = "mail")
             var mail:String?= "",
-        @ColumnInfo(name = "id_category")
-        var id_category:Int? = 1,
+        @ColumnInfo(name = "categoryId")
+        var categoryId:Int? = 1,
+        @ColumnInfo(name = "categoryName")
+        var categoryName:String? = "",
+        @ColumnInfo(name = "marker")
+        var marker:String? = "",
         @ColumnInfo(name = "images")
-        var images:ArrayList<String>? = null,
-        @Ignore
-        var category: Category? = null):ClusterItem, Serializable, Comparable<Spot> {
+        var images:ArrayList<String>? = null):ClusterItem, Serializable, Comparable<Spot> {
 
 
 

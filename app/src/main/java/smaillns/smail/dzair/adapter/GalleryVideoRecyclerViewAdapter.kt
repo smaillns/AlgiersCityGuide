@@ -72,7 +72,7 @@ class GalleryVideoRecyclerViewAdapter(var mValues: ArrayList<Video>, var mCtx: C
         val item = mValues[position]
 
         val imageAware = ImageViewAware(holder.videoMinature, false)
-        mImageLoader.displayImage(RetrofitService.baseUrl+"/images/"+item.image, imageAware,mDisplayImageOptions, mImageLoadingListener)
+        mImageLoader.displayImage(RetrofitService.imageBaseUrl+"/Images/"+item.image, imageAware,mDisplayImageOptions, mImageLoadingListener)
 
         holder.mVideoTitle.setText(item.title)
         holder.mChannelName.setText(item.channelName)

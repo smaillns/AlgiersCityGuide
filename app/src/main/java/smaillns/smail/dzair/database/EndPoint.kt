@@ -18,7 +18,7 @@ interface EndPoint {
     @GET("categories/{id}")
     fun getCategories(@Path("id") id:Int):Call<ArrayList<Spot>>
 
-    @GET("nbr")
+    @GET("spots/nbr")
     fun getNbrSpot():Call<List<TestDB>>
 
     @GET("images/{id}")
@@ -30,6 +30,6 @@ interface EndPoint {
     @GET("videos")
     fun getVideos():Call<ArrayList<Video>>
 
-    @GET("nbvideos")
+    @GET("videos/nbr")
     fun getNbrVideos():Call<List<TestDB>>
 }

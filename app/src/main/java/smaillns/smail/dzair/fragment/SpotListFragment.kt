@@ -27,6 +27,7 @@ import android.support.v7.app.AppCompatActivity
 import android.support.v7.view.ActionMode
 import android.support.v7.widget.*
 import android.util.DisplayMetrics
+import android.util.Log
 import android.view.*
 import android.view.animation.AccelerateDecelerateInterpolator
 import android.widget.AutoCompleteTextView
@@ -596,7 +597,7 @@ class SpotListFragment() :  TaskFragment(), GeolocationListener {
         else{
             for (spot in list){
 
-                if (spot.id_category == mCategoryId || mCategoryId == 0)
+                if (spot.categoryId == mCategoryId || mCategoryId == 0)
                     mDataset.add(spot)
             }
 
@@ -657,8 +658,9 @@ class SpotListFragment() :  TaskFragment(), GeolocationListener {
                 //progressBar.visibility = View.GONE
                 //toast("erreur")
                 showOffline()
-                Logcat.d("error")
-//                Toast.makeText(getActivity()!!, "error", Toast.LENGTH_SHORT).show()
+                println("***************** error ***************")
+                println(t.toString())
+                Toast.makeText(getActivity()!!, "error !!!", Toast.LENGTH_LONG).show()
             }
 
             override fun onResponse(call: Call<ArrayList<Spot>>?, response: Response<ArrayList<Spot>>?) {
@@ -670,7 +672,7 @@ class SpotListFragment() :  TaskFragment(), GeolocationListener {
                         RoomService.appDataBase.getSpotDao().addSpot(item)
                         // Toast.makeText(getActivity()!!, "ObjetAjouté "+item.id_restaurant, Toast.LENGTH_SHORT).show()
                         listSpot_.add(item)
-                        if (item.id_category == mCategoryId || mCategoryId == 0)
+                        if (item.categoryId == mCategoryId || mCategoryId == 0)
                             mDataset.add(item)
                     }
                     showContent()

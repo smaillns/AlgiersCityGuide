@@ -5,7 +5,8 @@ import retrofit2.converter.gson.GsonConverterFactory
 
 object RetrofitService {
 
-    val baseUrl = "http://192.168.1.34:8088"
+    val baseUrl = "https://hq7l4rl1c5.execute-api.us-east-1.amazonaws.com/dev/"
+    val imageBaseUrl="https://algiers-city-guide.s3.amazonaws.com"
 //    val baseUrl = "https://algiers-city-guide.appspot.com"
 
     val endPoint: EndPoint by lazy {

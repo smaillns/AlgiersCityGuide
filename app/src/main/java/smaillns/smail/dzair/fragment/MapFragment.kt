@@ -309,7 +309,7 @@ class MapFragment() : TaskFragment(), OnMapReadyCallback {
             mClusterManager = ClusterManager<Spot>(activity, mMap)
             mClusterManager!!.setRenderer(object : DefaultClusterRenderer<Spot>(activity, mMap, mClusterManager) {
                 override fun onBeforeClusterItemRendered(spot: Spot?, markerOptions: MarkerOptions?) {
-                    val category = spot!!.category
+                    val category =  Category(spot!!.categoryId!!, ""+spot!!.categoryName, ""+spot!!.marker)
                     val bitmapDescriptor = loadBitmapDescriptor(category!!)
 
                     markerOptions!!.title(spot!!.name)
@@ -440,10 +440,11 @@ class MapFragment() : TaskFragment(), OnMapReadyCallback {
         if(1==1){
 
             for (spot in list){
-                if (spot.category == null)
-                        fillCateories(spot)
+                /*
+                         commented on August 2021            */
+                //                if (spot.categoryName == null || spot.categoryName == "")
+                //                        fillCateories(spot)
                 mSpotList.add(spot)
-
                 }
 
             }
@@ -490,76 +491,77 @@ class MapFragment() : TaskFragment(), OnMapReadyCallback {
 
     }
 
-fun fillCateories(sp: Spot){
+//    fun fillCateories(sp: Spot){
+//
+//        val CATEGORY_ID_ALL = 0
+//        val CATEGORY_ID_FAVORITES = 1
+//        val CATEGORY_ID_HOTELS = 2
+//        val CATEGORY_ID_MUSEUM = 3
+//        val CATEGORY_ID_ATTRACTION = 4
+//        val CATEGORY_ID_BEACHES = 5
+//        val CATEGORY_ID_SHOPPOING = 6
+//        val CATEGORY_ID_RESTAURANT = 7
+//        val CATEGORY_ID_SPORT = 8
+//        val CATEGORY_ID_TRANSPORT = 9
+//        val CATEGORY_ID_OTHER = 10
+//        val CATEGORY_ID_PROXIMITY = 11
+//
+//        val category_all = Category(CATEGORY_ID_ALL, "", "")
+//        val category_fav = Category(CATEGORY_ID_FAVORITES, "", "")
+//        val category_hotel = Category(CATEGORY_ID_HOTELS, "hotels", "markers/hotels.png")
+//        val category_museum = Category(CATEGORY_ID_MUSEUM, "museums", "markers/museum.png")
+//        val category_attraction = Category(CATEGORY_ID_ATTRACTION, "attraction", "markers/attractions.png")
+//        val category_beach = Category(CATEGORY_ID_BEACHES, "beaches", "markers/beaches.png")
+//        val category_shopping = Category(CATEGORY_ID_SHOPPOING, "shopping", "markers/shopping.png")
+//        val category_restaurant = Category(CATEGORY_ID_RESTAURANT, "restaurants", "markers/food.png")
+//        val category_sport = Category(CATEGORY_ID_SPORT, "sport", "markers/sport.png")
+//        val category_transport = Category(CATEGORY_ID_TRANSPORT, "transport", "markers/transport.png")
+//        val category_other = Category(CATEGORY_ID_OTHER, "other", "markers/other.png")
+//        val category_proximity = Category(CATEGORY_ID_ALL, "proximity", "markers/proximity.png")
+//
+//
+//            when (sp.id_category) {
+//                CATEGORY_ID_ALL -> {
+//                    sp.category = category_all
+//                }
+//                CATEGORY_ID_FAVORITES -> {
+//                    sp.category = category_fav
+//                }
+//                CATEGORY_ID_HOTELS -> {
+//                    sp.category = category_hotel
+//                }
+//                CATEGORY_ID_MUSEUM -> {
+//                    sp.category = category_museum
+//                }
+//                CATEGORY_ID_ATTRACTION -> {
+//                    sp.category = category_attraction
+//                }
+//                CATEGORY_ID_BEACHES -> {
+//                    sp.category = category_beach
+//                }
+//                CATEGORY_ID_SHOPPOING -> {
+//                    sp.category = category_shopping
+//                }
+//                CATEGORY_ID_RESTAURANT -> {
+//                    sp.category = category_restaurant
+//                }
+//                CATEGORY_ID_SPORT -> {
+//                    sp.category = category_sport
+//                }
+//                CATEGORY_ID_TRANSPORT -> {
+//                    sp.category = category_transport
+//                }
+//                CATEGORY_ID_OTHER -> {
+//                    sp.category = category_other
+//                }
+//                CATEGORY_ID_PROXIMITY -> {
+//                    sp.category = category_proximity
+//                }
+//            }
+//
+//
+//    }
 
-    val CATEGORY_ID_ALL = 0
-    val CATEGORY_ID_FAVORITES = 1
-    val CATEGORY_ID_HOTELS = 2
-    val CATEGORY_ID_MUSEUM = 3
-    val CATEGORY_ID_ATTRACTION = 4
-    val CATEGORY_ID_BEACHES = 5
-    val CATEGORY_ID_SHOPPOING = 6
-    val CATEGORY_ID_RESTAURANT = 7
-    val CATEGORY_ID_SPORT = 8
-    val CATEGORY_ID_TRANSPORT = 9
-    val CATEGORY_ID_OTHER = 10
-    val CATEGORY_ID_PROXIMITY = 11
-
-    val category_all = Category(CATEGORY_ID_ALL, "", "")
-    val category_fav = Category(CATEGORY_ID_FAVORITES, "", "")
-    val category_hotel = Category(CATEGORY_ID_HOTELS, "hotels", "markers/hotels.png")
-    val category_museum = Category(CATEGORY_ID_MUSEUM, "museums", "markers/museum.png")
-    val category_attraction = Category(CATEGORY_ID_ATTRACTION, "attraction", "markers/attractions.png")
-    val category_beach = Category(CATEGORY_ID_BEACHES, "beaches", "markers/beaches.png")
-    val category_shopping = Category(CATEGORY_ID_SHOPPOING, "shopping", "markers/shopping.png")
-    val category_restaurant = Category(CATEGORY_ID_RESTAURANT, "restaurants", "markers/food.png")
-    val category_sport = Category(CATEGORY_ID_SPORT, "sport", "markers/sport.png")
-    val category_transport = Category(CATEGORY_ID_TRANSPORT, "transport", "markers/transport.png")
-    val category_other = Category(CATEGORY_ID_OTHER, "other", "markers/other.png")
-    val category_proximity = Category(CATEGORY_ID_ALL, "proximity", "markers/proximity.png")
-
-
-        when (sp.id_category) {
-            CATEGORY_ID_ALL -> {
-                sp.category = category_all
-            }
-            CATEGORY_ID_FAVORITES -> {
-                sp.category = category_fav
-            }
-            CATEGORY_ID_HOTELS -> {
-                sp.category = category_hotel
-            }
-            CATEGORY_ID_MUSEUM -> {
-                sp.category = category_museum
-            }
-            CATEGORY_ID_ATTRACTION -> {
-                sp.category = category_attraction
-            }
-            CATEGORY_ID_BEACHES -> {
-                sp.category = category_beach
-            }
-            CATEGORY_ID_SHOPPOING -> {
-                sp.category = category_shopping
-            }
-            CATEGORY_ID_RESTAURANT -> {
-                sp.category = category_restaurant
-            }
-            CATEGORY_ID_SPORT -> {
-                sp.category = category_sport
-            }
-            CATEGORY_ID_TRANSPORT -> {
-                sp.category = category_transport
-            }
-            CATEGORY_ID_OTHER -> {
-                sp.category = category_other
-            }
-            CATEGORY_ID_PROXIMITY -> {
-                sp.category = category_proximity
-            }
-        }
-
-
-}
     fun loadDataFromServer() {
         val listSpot_ = mutableListOf<Spot>()
         val call = RetrofitService.endPoint.getSpots()
@@ -569,7 +571,6 @@ fun fillCateories(sp: Spot){
                 //progressBar.visibility = View.GONE
                 //toast("erreur")
                 showOffline()
-                Logcat.d("error")
 //                Toast.makeText(getActivity()!!, "error", Toast.LENGTH_SHORT).show()
             }
 
@@ -582,7 +583,9 @@ fun fillCateories(sp: Spot){
                         RoomService.appDataBase.getSpotDao().addSpot(item)
                         // Toast.makeText(getActivity()!!, "ObjetAjouté "+item.id_restaurant, Toast.LENGTH_SHORT).show()
                         listSpot_.add(item)
-                        fillCateories(item)
+                        /*
+                         commented on August 2021            */
+                        //fillCateories(item)
                         mSpotList.add(item)
                     }
 
