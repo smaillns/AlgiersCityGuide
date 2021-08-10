@@ -4,10 +4,10 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:id="@+id/splash_screen_content2"
-    tools:context="smaillns.smail.dzair.activity.SplashscreenActivity">
+    tools:context="smaillns.smail.toulouse.activity.SplashscreenActivity">
 
 
-    <smaillns.smail.dzair.kbv.KenBurnsView
+    <smaillns.smail.toulouse.kbv.KenBurnsView
         android:id="@+id/ken_burns_images"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />

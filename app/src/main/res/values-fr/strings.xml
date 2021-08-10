@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Dzaïr</string>
+    <string name="app_name">Toulouse</string>
 
 
     <string name="app_store_uri">https://play.google.com/store/apps/details?id=%1$s</string>
@@ -22,8 +22,8 @@
 
     <string name="navigation_drawer_open" translatable="false">Open navigation drawer</string>
     <string name="navigation_drawer_close" translatable="false">Close navigation drawer</string>
-    <string name="nav_header_title" translatable="false">Algiers City Guide</string>
-    <string name="nav_header_subtitle" translatable="false">Alger, Algérie</string>
+    <string name="nav_header_title" translatable="false">Guide Touristique</string>
+    <string name="nav_header_subtitle" translatable="false">Toulouse, France</string>
     <string name="nav_header_desc" translatable="false">Navigation header</string>
 
 
@@ -45,7 +45,7 @@
     <string name="action_transport">Transport</string>
     <string name="action_food">Restaurants</string>
     <string name="action_notifications">Notifications</string>
-    <string name="action_proximite">A proximité d\'Alger</string>
+    <string name="action_proximite">A proximité de Toulouse</string>
     <string name="action_gallery">Galerie Vidéos</string>
     <string name="action_ATM">ATM</string>
     <string name="action_public_services">Services Publics</string>
@@ -54,7 +54,7 @@
     <string name="action_title_more">Plus</string>
     <string name="action_more">Autres</string>
 
-    <string name="video_gallery">Alger en vidéos</string>
+    <string name="video_gallery">Toulouse en vidéos</string>
 
     <string name="language">Langue : Fr</string>
 
@@ -79,7 +79,7 @@
     <string name="dummy_content">DUMMY\nCONTENT</string>
 
 
-    <string name="fragment_spot_detail_share_subject">Visiter Alger</string>
+    <string name="fragment_spot_detail_share_subject">Visiter Toulouse</string>
     <string name="fragment_spot_detail_share_title">Partager avec les amis via</string>
 
 
@@ -94,7 +94,7 @@
     <string name="delete_favorite">Supprimé de favoris</string>
 
     <string name="about_text">
-        "Algiers-City-Guide une superbe application permettant d'explorer les lieux mangnifiques de la ville d'Alger, capitale d'Algérie'\n"
+        "Toulouse-City-Guide une superbe application permettant d'explorer les lieux mangnifiques de la ville de Toulouse\n"
     </string>
 
     <!--<string name="gps">-->

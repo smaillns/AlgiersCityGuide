@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">Dzaïr</string>
+    <string name="app_name">Toulouse</string>
 
 
     <string name="app_store_uri">https://play.google.com/store/apps/details?id=%1$s</string>
@@ -23,8 +23,8 @@
 
     <string name="navigation_drawer_open" translatable="false">Open navigation drawer</string>
     <string name="navigation_drawer_close" translatable="false">Close navigation drawer</string>
-    <string name="nav_header_title" translatable="false">Algiers City Guide</string>
-    <string name="nav_header_subtitle" translatable="false">Algiers, Algeria</string>
+    <string name="nav_header_title" translatable="false">Toulouse City Guide</string>
+    <string name="nav_header_subtitle" translatable="false">Toulouse, France</string>
     <string name="nav_header_desc" translatable="false">Navigation header</string>
 
 
@@ -46,7 +46,7 @@
     <string name="action_transport">Transport</string>
     <string name="action_food">Restaurants</string>
     <string name="action_notifications">Notifications</string>
-    <string name="action_proximite">Proximity of Algiers</string>
+    <string name="action_proximite">Proximity of Toulouse</string>
     <string name="action_gallery">Video Gallery</string>
     <string name="action_ATM">ATM</string>
     <string name="action_public_services">Public services</string>
@@ -55,7 +55,7 @@
     <string name="action_title_more">More</string>
     <string name="action_more">Other</string>
 
-    <string name="video_gallery">Algiers in videos</string>
+    <string name="video_gallery">Toulouse in videos</string>
 
     <string name="language">Language : En</string>
 
@@ -94,7 +94,7 @@
     <string name="dummy_content">DUMMY\nCONTENT</string>
 
 
-    <string name="fragment_spot_detail_share_subject">Visit Algiers</string>
+    <string name="fragment_spot_detail_share_subject">Visit Toulouse</string>
     <string name="fragment_spot_detail_share_title">Share with friends via</string>
 
 
@@ -106,7 +106,7 @@
     <string name="title_activity_spot_details_acitvity">SpotDetailsAcitvity</string>
 
     <string name="about_text">
-                "Algiers-City-Guide an application to explore the mangnific places in Algiers, capital of Algeria \n"
+                "Toulouse-City-Guide an application to explore the mangnific places in Toulouse\n"
     </string>
 
     <string name="add_favorite">Added to favorites</string>
