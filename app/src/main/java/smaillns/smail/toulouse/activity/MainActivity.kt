@@ -37,12 +37,12 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
     val CATEGORY_ID_HOTELS = 2
     val CATEGORY_ID_MUSEUM = 3
     val CATEGORY_ID_ATTRACTION = 4
-    val CATEGORY_ID_BEACHES = 5
     val CATEGORY_ID_SHOPPOING = 6
     val CATEGORY_ID_RESTAURANT = 7
     val CATEGORY_ID_SPORT = 8
     val CATEGORY_ID_TRANSPORT = 9
-    val CATEGORY_ID_OTHER = 10
+    val CATEGORY_DIVERS = 10
+
     val CATEGORY_ID_PROXIMITY = 11
 
     val VIDEO_GALLERY = 100
@@ -375,15 +375,6 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
                 tv_header_title.visibility = View.GONE
                 setTitle(R.string.action_attraction)
             }
-            R.id.menu_beaches -> {
-                cate = CATEGORY_ID_BEACHES
-
-                val  listFragment = SpotListFragment.newInstance(CATEGORY_ID_BEACHES)
-                fragmentTransaction.replace(R.id._placeholder, listFragment).commitAllowingStateLoss()
-
-                tv_header_title.visibility = View.GONE
-                setTitle(R.string.action_beaches)
-            }
             R.id.menu_shopping -> {
 
                 cate = CATEGORY_ID_SHOPPOING
@@ -426,9 +417,9 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
             }
             R.id.menu_other -> {
 
-                cate = CATEGORY_ID_OTHER
+                cate = CATEGORY_DIVERS
 
-                val  listFragment = SpotListFragment.newInstance(CATEGORY_ID_OTHER)
+                val  listFragment = SpotListFragment.newInstance(CATEGORY_DIVERS)
                 fragmentTransaction.replace(R.id._placeholder, listFragment).commitAllowingStateLoss()
 
                 tv_header_title.visibility = View.GONE

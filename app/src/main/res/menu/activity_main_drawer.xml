@@ -20,9 +20,9 @@
         android:id="@+id/group2"
         android:checkableBehavior="single">
         <item
-            android:id="@+id/menu_hotels"
-            android:icon="@drawable/ic_hotel_24dp"
-            android:title="@string/action_hotels"
+            android:id="@+id/menu_other"
+            android:icon="@drawable/ic_more_horiz_black_24dp"
+            android:title="@string/action_more"
             />
         <item
             android:id="@+id/menu_museum"
@@ -44,11 +44,7 @@
             android:icon="@drawable/ic_shopping_cart_black_24dp"
             android:title="@string/action_shopping"
             />
-        <item
-            android:id="@+id/menu_restaurants"
-            android:icon="@drawable/ic_restaurant_black_24dp"
-            android:title="@string/action_food"
-            />
+
         <item
             android:id="@+id/menu_sport"
             android:icon="@drawable/ic_fitness_center_black_24dp"
@@ -59,10 +55,18 @@
             android:icon="@drawable/ic_directions_bus_black_24dp"
             android:title="@string/action_transport"
             />
+
         <item
-            android:id="@+id/menu_other"
-            android:icon="@drawable/ic_more_horiz_black_24dp"
-            android:title="@string/action_more"
+            android:id="@+id/menu_hotels"
+            android:enabled="false"
+            android:icon="@drawable/ic_hotel_24dp"
+            android:title="@string/action_hotels"
+            />
+        <item
+            android:id="@+id/menu_restaurants"
+            android:enabled="false"
+            android:icon="@drawable/ic_restaurant_black_24dp"
+            android:title="@string/action_food"
             />
     </group>
 
