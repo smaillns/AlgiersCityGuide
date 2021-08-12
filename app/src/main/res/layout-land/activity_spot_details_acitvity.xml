@@ -45,7 +45,7 @@
             android:maxHeight="10dp"
             android:paddingBottom="10dp"
             android:paddingTop="10dp"
-            android:src="@drawable/app_logo6" />
+            android:src="@drawable/logo_horizontal_white" />
     </android.support.v7.widget.Toolbar>
 
 
