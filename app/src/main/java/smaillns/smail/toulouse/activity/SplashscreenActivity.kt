@@ -49,9 +49,9 @@ class SplashscreenActivity : AppCompatActivity() {
         when(rdm){
             in 1..11 ->  mKenBurns.setImageResource(R.drawable.image1)
             in 12..38 ->  mKenBurns.setImageResource(R.drawable.image1)
-            in 39..65 ->  mKenBurns.setImageResource(R.drawable.image1)
+            in 39..65 ->  mKenBurns.setImageResource(R.drawable.image2)
             in 66..84 ->  mKenBurns.setImageResource(R.drawable.image1)
-            else   ->   mKenBurns.setImageResource(R.drawable.image5)
+            else   ->   mKenBurns.setImageResource(R.drawable.image2)
 
         }
 
