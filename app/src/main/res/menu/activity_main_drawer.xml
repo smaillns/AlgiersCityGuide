@@ -34,11 +34,7 @@
             android:icon="@drawable/ic_linked_camera_24dp"
             android:title="@string/action_attraction"
             />
-        <item
-            android:id="@+id/menu_beaches"
-            android:icon="@drawable/ic_beach_access_black_24dp"
-            android:title="@string/action_beaches"
-            />
+
         <item
             android:id="@+id/menu_shopping"
             android:icon="@drawable/ic_shopping_cart_black_24dp"
