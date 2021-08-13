@@ -10,6 +10,9 @@
     <string name="google_maps_key">AIzaSyAcv1QRGREISd7MP1rGnXDUf6S7VtTsl4s</string>
     <string name="youtube_api_key">AIzaSyByz_OmKb9Jj7kwhWtNl0Whw2f7P8uecaQ</string>
 
+    <string name="facebook_app_id">190826802062131</string>
+    <string name="facebook_client_token">jS6cKwVpW23gdDq765YzNrKiTVI</string>
+
     <string name="action_call" translatable="false">Make call</string>
     <string name="action_navigate" translatable="false">Go to spot</string>
     <string name="action_start_web_activity" translatable="false">Explore in Map</string>
