@@ -9,6 +9,9 @@
     <string name="youtube_api_key">AIzaSyByz_OmKb9Jj7kwhWtNl0Whw2f7P8uecaQ</string>
 
 
+    <string name="facebook_app_id">898738787714859</string>
+    <string name="facebook_client_token">Ujba-ew4WYyUBEeEOS2olhFU5Mo</string>
+
     <string name="action_call" translatable="false">Voulez vous effectuer l\'appel</string>
     <string name="action_navigate" translatable="false">Naviguer vers le spot</string>
     <string name="action_start_web_activity" translatable="false">Explorer</string>
