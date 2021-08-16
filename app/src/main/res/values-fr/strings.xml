@@ -10,7 +10,7 @@
 
 
     <string name="facebook_app_id">898738787714859</string>
-    <string name="facebook_client_token">Ujba-ew4WYyUBEeEOS2olhFU5Mo</string>
+    <string name="fb_login_protocol_scheme">fb898738787714859</string>
 
     <string name="action_call" translatable="false">Voulez vous effectuer l\'appel</string>
     <string name="action_navigate" translatable="false">Naviguer vers le spot</string>

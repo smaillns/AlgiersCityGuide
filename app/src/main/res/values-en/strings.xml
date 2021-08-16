@@ -11,7 +11,7 @@
     <string name="youtube_api_key">AIzaSyByz_OmKb9Jj7kwhWtNl0Whw2f7P8uecaQ</string>
 
     <string name="facebook_app_id">898738787714859</string>
-    <string name="facebook_client_token">Ujba-ew4WYyUBEeEOS2olhFU5Mo</string>
+    <string name="fb_login_protocol_scheme">fb898738787714859</string>
 
     <string name="action_call" translatable="false">Make call</string>
     <string name="action_navigate" translatable="false">Go to spot</string>
